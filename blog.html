@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LA SHOOPA - be modern</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body id="body">
+		<header>
+		<nav class="nav-bar">
+			<div class="nav-holder">
+				<a class="nav-logo" href="index.html">LA SHOOPA</a>
+				<ul class="nav-list">
+				<ul class="nav-list">
+					<li><a href="men.html">Men</a></li>
+					<li ><a href="women.html">Women</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="blog.html">Blog</a></li>
+					<li ><a href="support.html">Support</a></li>
+				</ul>
+				</ul>
+				<div class="nav-cart">
+					<a href="cart.html">
+						<img src="cart.png" alt="">
+					</a><span class="price" id="ttpay">$99999</span>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+		
+
+		<section class="body">
+
+
+			<div class="body-holder">
+
+				<div class="container">
+					<div class="middle-line">
+						<h1 id="shirts">We are here</h1>
+					</div>
+					<div class="row" style="text-align:left;">
+						<h2 class="active">We are opened</h2>
+						<p>Our store is opened and currently only online, and we are ready to deliver the clothes to your sweet home,
+						</p>
+					</div>
+					<div class="row" style="margin-top:2em">
+						<h2 class="active">New Arrivals</h2>
+						<p>We have recently brought new batch of clothes, They all from famous brand like Armani, Givenchy, Luie </p>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="footer-holder">
+
+				<div class="col-20">
+					<h1>Our stores</h1>
+					<address>
+						1041 South Grande Avenue</br>
+						Los Angeles, CA 90015</br>
+						<strong>(213) 748-2411</strong>
+					</address>
+					<address>
+						<p>1041 South Grande Avenue</p>
+						<p>Los Angeles, CA 90015</p>
+						<p class="phone">(213) 748-2411</p>
+					</address>
+				</div>
+
+				<div class="col-40">
+					<h1>Blog Posts</h1>
+					<dl>
+						<dt>
+							<strong><a href="#">Lorem ipsum dolor sit amet</a></strong>
+						</dt>
+						<dd>
+						<p href="#">Quidem, perspiciatis, non adipisci expedita distinctio hic eum impedit natus esse officia odio similique nulla unde sed error harum dolore animi excepturi.</p>
+						</dd>
+						
+						<dt>
+							<strong><a href="#">Ut enim ad minim veniam.</a></strong>
+						</dt>	
+ 						<dd>
+ 							<p>in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+ 						</dd>
+ 						<dt>
+							<strong><a href="#">Ut enim ad minim veniam.</a></strong>
+ 						</dt>
+ 						<dd>
+ 							<p>in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+ 						</dd>
+					</dl>
+				</div>
+
+				<div class="col-20">
+					<h1>Support</h1>
+					<ul>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Payment</a></li>
+						<li><a href="#">Refunds</a></li>
+						<li><a href="#">Track Order</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Press</a></li>
+					</ul>					
+				</div>
+
+			</div><!-- /footer-holder -->
+				<div class="copyright">
+					<p>&copy; 2014 lashoopa.com  - All rights reserved id: 00002210 <a href="00002210.doc">report</a></p> 
+				</div>
+		</footer>
+
+<script>
+			var totalToPay = document.getElementById("ttpay");
+		if(sessionStorage.getItem("totalToPay") == null){
+			sessionStorage.setItem("totalToPay", 0);
+			totalToPay.innerHTML = 0;	
+		}
+		else{
+			totalToPay.innerHTML = sessionStorage.getItem("totalToPay");
+		}
+		function gain(price){
+			ttp = parseInt(sessionStorage.getItem("totalToPay"));
+			price = parseInt(price);
+			ttp = ttp + price;
+			sessionStorage.setItem("totalToPay", ttp);
+			totalToPay.innerHTML = ttp+"$";
+					console.log(ttp);
+
+		}
+</script>
+
+
+	</body>
+</html>
